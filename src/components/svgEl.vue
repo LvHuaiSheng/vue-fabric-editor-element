@@ -1,0 +1,307 @@
+<!--
+ * @Author: 秦少卫
+ * @Date: 2022-09-03 19:16:55
+ * @LastEditors: 秦少卫
+ * @LastEditTime: 2023-03-31 13:09:32
+ * @Description: 素材面板
+-->
+
+<template>
+  <div>
+    <el-divider content-position="left">{{ $t('cartoon') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(460, 489)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('fruits') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(386, 409)"
+        @click="addItem"
+        ::draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('sports') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(410, 459)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('seasons') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(40, 49)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('eletronics') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(50, 75)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('fruits') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(76, 89)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('clothes') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(89, 136)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('flags') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(137, 151)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('threes') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(152, 181)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('food') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(182, 201)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('clothes') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(202, 222)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('medals') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(223, 252)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('business') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(253, 261)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('activity') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(262, 270)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('fruits') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(271, 300)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('vintage') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(301, 350)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+    <el-divider content-position="left">{{ $t('cartoon') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(351, 385)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+
+    <el-divider content-position="left">{{ $t('animals') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(490, 519)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+
+    <el-divider content-position="left">{{ $t('hand_painted') }}</el-divider>
+    <div class="box">
+      <img
+        v-lazy="`${repoSrc}svg/${item}.svg`"
+        alt=""
+        :key="item"
+        v-for="item in getIndex(0, 39)"
+        @click="addItem"
+        :draggable="true"
+        @dragend="dragItem"
+      />
+    </div>
+  </div>
+</template>
+
+<script>
+import { v4 as uuid } from 'uuid';
+const defaultPosition = {
+  left: 100,
+  top: 100,
+  shadow: '',
+  fontFamily: '1-1',
+};
+export default {
+  name: 'ToolBar',
+  inject: ['canvas', 'fabric'],
+  data() {
+    return {
+      repoSrc: import.meta.env.APP_REPO,
+      arr: [],
+    };
+  },
+  methods: {
+    getIndex(start, end) {
+      const arr = Array(end - (start - 1)).fill('');
+      return arr.map((item, i) => i + start);
+    },
+    dragItem(event) {
+      const url = event.target.src;
+      // 会有性能开销 dragAddItem复用更简洁
+      this.fabric.loadSVGFromURL(url, (objects) => {
+        const item = this.fabric.util.groupSVGElements(objects, {
+          shadow: '',
+          fontFamily: 'arial',
+          id: uuid(),
+          name: 'svg元素',
+        });
+        this.canvas.editor.dragAddItem(event, item);
+      });
+    },
+    // 按照类型渲染
+    addItem(e) {
+      const url = e.target.src;
+      this.fabric.loadSVGFromURL(url, (objects, options) => {
+        const item = this.fabric.util.groupSVGElements(objects, {
+          ...options,
+          ...defaultPosition,
+          id: uuid(),
+          name: 'svg元素',
+        });
+        this.canvas.c.add(item);
+        this.canvas.c.requestRenderAll();
+      });
+    },
+  },
+};
+</script>
+
+<style scoped lang="less">
+img {
+  display: inline-block;
+  width: 53px;
+  margin-left: 2px;
+  margin-bottom: 2px;
+  background: #f5f5f5;
+  padding: 6px;
+  cursor: pointer;
+}
+</style>

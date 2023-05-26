@@ -1,0 +1,72 @@
+{
+  "name": "view-ui-project-ts",
+  "private": true,
+  "version": "1.0.0",
+  "description": "a template project for vue3, ViewUIPlus, TypeScript and Vite.",
+  "scripts": {
+    "serve": "npm run dev",
+    "dev": "vite serve",
+    "dev:staging": "vite serve --mode=staging",
+    "dev:prod": "vite serve --mode=production",
+    "build": "vite build",
+    "build:staging": "vite build --mode=staging",
+    "preview": "npm run build && vite preview",
+    "preview:staging": "npm run build:staging && vite preview --mode=staging",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.1.0",
+    "@vueuse/core": "^10.1.0",
+    "axios": "^1.3.4",
+    "color-gradient-picker-vue3": "^1.0.0",
+    "element-plus": "^2.3.5",
+    "events": "^3.3.0",
+    "fabric": "^5.2.1",
+    "fontfaceobserver": "^2.1.0",
+    "hotkeys-js": "^3.8.8",
+    "lodash-es": "^4.17.21",
+    "number-precision": "^1.6.0",
+    "psd.js": "^3.6.6",
+    "uuid": "^8.3.2",
+    "vue": "^3.2.25",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.0.16",
+    "vue3-lazyload": "^0.3.6"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@types/events": "^3.0.0",
+    "@types/fabric": "^5.3.0",
+    "@types/lodash-es": "^4.17.7",
+    "@types/node": "^18.15.13",
+    "@types/uuid": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "autoprefixer": "^10.4.5",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.9.0",
+    "husky": "^8.0.0",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "lint-staged": "^13.1.1",
+    "prettier": "2.8.4",
+    "typescript": "^5.0.4",
+    "unplugin-auto-import": "^0.16.0",
+    "vite": "^4.2.1",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-html": "^3.2.0",
+    "vite-plugin-vue-setup-extend-plus": "^0.1.0",
+    "vue-tsc": "^0.34.7"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
