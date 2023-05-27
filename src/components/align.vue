@@ -9,7 +9,7 @@
 <template>
   <div v-if="this.mSelectMode === 'multiple'" class="box attr-item">
     <!-- 水平对齐 -->
-    <el-tooltip :content="$t('group_align.left')">
+    <el-tooltip :show-after="500" :content="$t('group_align.left')">
       <el-link :underline="false" :disabled="notMultiple()" @click="left" size="small">
         <svg
           t="1650442284704"
@@ -25,7 +25,7 @@
         </svg>
       </el-link>
     </el-tooltip>
-    <el-tooltip :content="$t('group_align.centerX')">
+    <el-tooltip :show-after="500" :content="$t('group_align.centerX')">
       <el-link :underline="false" :disabled="notMultiple()" @click="xcenter" size="small">
         <svg
           t="1650442754876"
@@ -45,7 +45,7 @@
         </svg>
       </el-link>
     </el-tooltip>
-    <el-tooltip :content="$t('group_align.right')">
+    <el-tooltip :show-after="500" :content="$t('group_align.right')">
       <el-link :underline="false" :disabled="notMultiple()" @click="right" size="small">
         <svg
           t="1650442299564"
@@ -65,7 +65,7 @@
       </el-link>
     </el-tooltip>
     <!-- 垂直对齐 -->
-    <el-tooltip :content="$t('group_align.top')">
+    <el-tooltip :show-after="500" :content="$t('group_align.top')">
       <el-link :underline="false" :disabled="notMultiple()" @click="top" size="small">
         <svg
           t="1650442692910"
@@ -85,7 +85,7 @@
         </svg>
       </el-link>
     </el-tooltip>
-    <el-tooltip :content="$t('group_align.centerY')">
+    <el-tooltip :show-after="500" :content="$t('group_align.centerY')">
       <el-link :underline="false" :disabled="notMultiple()" @click="ycenter" size="small">
         <svg
           t="1650442732396"
@@ -105,7 +105,7 @@
         </svg>
       </el-link>
     </el-tooltip>
-    <el-tooltip :content="$t('group_align.bottom')">
+    <el-tooltip :show-after="500" :content="$t('group_align.bottom')">
       <el-link :underline="false" :disabled="notMultiple()" @click="bottom" size="small">
         <svg
           t="1650442674784"
@@ -126,7 +126,7 @@
       </el-link>
     </el-tooltip>
     <!-- 平均对齐 -->
-    <el-tooltip :content="$t('group_align.averageX')">
+    <el-tooltip :show-after="500" :content="$t('group_align.averageX')">
       <el-link :underline="false" :disabled="notMultiple()" @click="xequation" size="small">
         <svg
           t="1650442800956"
@@ -146,7 +146,7 @@
         </svg>
       </el-link>
     </el-tooltip>
-    <el-tooltip :content="$t('group_align.averageY')">
+    <el-tooltip :show-after="500" :content="$t('group_align.averageY')">
       <el-link :underline="false" :disabled="notMultiple()" @click="yequation">
         <svg
           t="1650442784286"

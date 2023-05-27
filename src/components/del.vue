@@ -7,7 +7,7 @@
 -->
 
 <template>
-  <el-tooltip v-if="mixinState.mSelectMode" :content="$t('quick.del')">
+  <el-tooltip :show-after="500" v-if="mixinState.mSelectMode" :content="$t('quick.del')">
     <el-link :underline="false" @click="del">
       <el-icon size="16"><Delete /></el-icon>
     </el-link>

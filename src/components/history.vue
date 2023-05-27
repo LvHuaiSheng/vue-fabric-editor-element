@@ -9,14 +9,14 @@
 <template>
   <el-space :size="5">
     <!-- 后退 -->
-    <el-tooltip :content="$t('history.revocation') + `(${undoStack.length})`">
+    <el-tooltip :show-after="500" :content="$t('history.revocation') + `(${undoStack.length})`">
       <el-button @click="undo" type="text" class="history-btn" size="small" :disabled="!canUndo">
         <el-icon size="20"><RefreshLeft /></el-icon>
       </el-button>
     </el-tooltip>
 
     <!-- 重做 -->
-    <el-tooltip :content="$t('history.redo') + `(${redoStack.length})`">
+    <el-tooltip :show-after="500" :content="$t('history.redo') + `(${redoStack.length})`">
       <el-button @click="redo" type="text" class="history-btn" size="small" :disabled="!canRedo">
         <el-icon size="20"><RefreshRight /></el-icon>
       </el-button>

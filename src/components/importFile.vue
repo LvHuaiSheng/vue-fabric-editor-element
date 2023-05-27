@@ -80,6 +80,7 @@ export default {
     },
     handleConfirm() {
       this.showModal = false;
+      this.insertSvgStr();
     },
     // 插入图片
     async insertImg() {

@@ -9,7 +9,7 @@
 <template>
   <div v-if="mixinState.mSelectMode === 'one'" class="box attr-item">
     <!-- <el-link :underline="false"-group size="small" v-if="mSelectMode === 'one'"> -->
-    <el-tooltip :content="$t('flip.x')">
+    <el-tooltip :show-after="500" :content="$t('flip.x')">
       <el-link :underline="false" :disabled="notSelectOneMode()" @click="flip('X')">
         <svg
           t="1650443094178"
@@ -36,7 +36,7 @@
         </svg>
       </el-link>
     </el-tooltip>
-    <el-tooltip :content="$t('flip.y')">
+    <el-tooltip :show-after="500" :content="$t('flip.y')">
       <el-link :underline="false" :disabled="notSelectOneMode()" @click="flip('Y')">
         <svg
           t="1650443104385"

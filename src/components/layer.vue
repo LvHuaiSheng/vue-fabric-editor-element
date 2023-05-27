@@ -17,7 +17,7 @@
           :key="item.id"
           :class="isSelect(item) && 'active'"
         >
-          <el-tooltip :content="item.name || item.text || item.type" placement="right">
+          <el-tooltip :show-after="500" :content="item.name || item.text || item.type" placement="right">
             <div class="ellipsis">
               <span :class="isSelect(item) && 'active'" v-html="iconType(item.type)"></span>
               | {{ textType(item.type, item) }}

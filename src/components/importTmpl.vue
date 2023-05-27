@@ -9,7 +9,7 @@
 <template>
   <div style="display: inline-block">
     <el-divider content-position="left">{{ $t('title_template') }}</el-divider>
-    <el-tooltip
+    <el-tooltip :show-after="500"
       :content="item.label"
       v-for="(item, i) in list"
       :key="`${i}-bai1-button`"

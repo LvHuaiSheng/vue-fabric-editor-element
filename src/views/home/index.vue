@@ -19,7 +19,7 @@
           <import-JSON></import-JSON>
           <import-file></import-file>
           <!-- 标尺开关 -->
-          <el-tooltip :content="$t('grid')">
+          <el-tooltip :show-after="500" :content="$t('grid')">
             <el-switch v-model="ruler" size="small" class="switch"></el-switch>
           </el-tooltip>
           <history></history>

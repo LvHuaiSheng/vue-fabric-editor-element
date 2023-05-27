@@ -7,7 +7,7 @@
 -->
 
 <template>
-  <el-tooltip :content="$t('quick.lock')" v-if="mSelectMode === 'one'">
+  <el-tooltip :show-after="500" :content="$t('quick.lock')" v-if="mSelectMode === 'one'">
     <el-link v-if="isLock" :underline="false" @click="doLock(false)">
       <el-icon size="16"><Lock /></el-icon>
     </el-link>

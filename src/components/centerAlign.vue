@@ -9,7 +9,7 @@
 <template>
   <div v-if="mSelectMode" class="box attr-item">
     <!-- 水平集中 -->
-    <el-tooltip :content="$t('center_align.centerX')">
+    <el-tooltip :show-after="500" :content="$t('center_align.centerX')">
       <el-link :underline="false" :disabled="!mSelectMode" @click="position('centerH')">
         <svg
           t="1650442559691"
@@ -29,7 +29,7 @@
       </el-link>
     </el-tooltip>
     <!-- 水平垂直居中 -->
-    <el-tooltip :content="$t('center_align.center')">
+    <el-tooltip :show-after="500" :content="$t('center_align.center')">
       <el-link :underline="false" :disabled="!mSelectMode" @click="position('center')">
         <svg
           t="1650852784867"
@@ -55,7 +55,7 @@
       </el-link>
     </el-tooltip>
     <!-- 垂直居中 -->
-    <el-tooltip :content="$t('center_align.centerY')">
+    <el-tooltip :show-after="500" :content="$t('center_align.centerY')">
       <el-link :underline="false" :disabled="!mSelectMode" @click="position('centerV')">
         <svg
           t="1650442510967"

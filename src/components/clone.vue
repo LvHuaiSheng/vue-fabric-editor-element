@@ -1,5 +1,5 @@
 <template>
-  <el-tooltip v-if="mixinState.mSelectMode === 'one'" :content="$t('quick.copy')">
+  <el-tooltip :show-after="500" v-if="mixinState.mSelectMode === 'one'" :content="$t('quick.copy')">
     <el-link :underline="false" @click="clone">
       <el-icon size="16"><CopyDocument /></el-icon>
     </el-link>
