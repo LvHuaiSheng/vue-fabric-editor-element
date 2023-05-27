@@ -10,13 +10,24 @@
   <el-link :underline="false" @click="preview">
     {{ $t('preview') }}
   </el-link>
+  <el-image-viewer
+    v-if="showViewer"
+    hideOnClickModal
+    @close="
+      () => {
+        showViewer = false;
+        url = '';
+      }
+    "
+    :url-list="[url]"
+  />
 </template>
 
 <script lang="ts" setup>
 import { fabric } from 'fabric';
-// import { ImagePreview } from 'element-plus';
 import vfe from 'vfe';
-
+const url = ref('');
+const showViewer = ref(false);
 const canvas = inject('canvas') as vfe.ICanvas;
 const getImgUrl = () => {
   canvas.editor.ruler.hideGuideline();
@@ -39,10 +50,8 @@ const getImgUrl = () => {
 };
 const preview = () => {
   const dataUrl = getImgUrl();
-  // TODO 图片预览
-  // ImagePreview.show({
-  //   previewList: [dataUrl],
-  // });
+  url.value = dataUrl;
+  showViewer.value = true;
 };
 </script>
 
