@@ -170,7 +170,7 @@
           <div class="content slider-box">
             <el-slider
               v-model="baseAttr.opacity"
-              :max="360"
+              :max="100"
               size="small"
               @input="(value) => changeCommon('opacity', value)"
             />
@@ -525,10 +525,10 @@ export default {
     },
     getFreeFontList() {
       axios.get(`${repoSrc}/font/free-font.json`).then((res) => {
-        this.fontFamilyList = {
+        this.fontFamilyList = [
           ...this.fontFamilyList,
           ...Object.entries(res.data).map(([, value]) => value),
-        };
+        ];
       });
     },
     // 通用属性改变
